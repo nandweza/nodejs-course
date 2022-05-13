@@ -1,2 +1,2 @@
 # nodejs-course
-This repo contains my learnings and introduction to nodejs
+This repo contains my learning and introduction to nodejs programming
