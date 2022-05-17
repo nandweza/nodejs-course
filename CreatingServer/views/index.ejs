@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nodejs</title>
+    <title>Nodejs | <%= title %></title>
 </head>
 <body>
    <h1>Home</h1>
    <h2 color="red">My Journey to Nodejs Empire!</h2> 
+
+    <!--<% const name = 'mario' %>-->
+
    <nav>
        <div class="site-title">
            <a href="/"><h1>Nodejs Course</h1></a>
            <p>My journey to Nodejs!</p>
+           <!--<p><%= name %></p>-->
        </div>
        <ul>
            <li><a href="/">Blogs</a></li>
@@ -23,6 +27,18 @@
 
    <div class="blogs content">
        <h2>All Blogs</h2>
+
+       <% if (blogs.length > 0) { %>
+         <% blogs.forEach(blog => { %>
+
+            <h3 class="title"><%= blog.title %></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+
+        <% }) %>
+       <% } else { %>
+        <p>There are no blogs to display....</p>
+       <% } %>
+
    </div>
 </body>
 </html>
