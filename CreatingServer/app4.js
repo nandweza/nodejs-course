@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connect to mongodb
-const dbURI = 'mongodb+srv://nandweza:0108+2603@nodejscourse.crqut.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = 'MongoDB URI';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
